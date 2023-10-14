@@ -4,10 +4,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-# Assuming you have a CSV file with labeled data (0 for non-hate speech, 1 for hate speech)
-
-# Assuming your dataset has 'text' column for the text content and 'label' column for the label.
-data = pd.read_csv('your_dataset.csv')
+# Assuming labeled data 
+# 1 - hate speech
+# 0 - non-hate speech
+# Assuming dataset has 'text' column for the text content and 'label' column for the label.
+data = pd.read_csv('dataset.csv')
 
 X = data['text']
 y = data['label']
